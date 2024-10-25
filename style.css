@@ -1,0 +1,165 @@
+
+body{
+  margin: 0;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+a{
+  text-decoration: none;
+  padding:16px 16px;
+  line-height: 50px;
+
+}
+
+main{
+  text-align: center;
+  padding:30px;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+main img{
+  border-radius: 50%;
+}
+
+main p{
+  font-weight: bold;
+  width: 300px;
+  border-radius: 10%;
+  margin: 12px auto;
+  font-size: 2em;
+  color: white;
+  background: black;
+}
+
+section{
+  text-align: center;
+  animation: scrollanime linear;
+  animation-timeline: scrollanime();
+
+}
+
+@keyframes scrollanime{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+
+/* 四角のアニメーション */
+.square-animation {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+
+}
+
+.square {
+  position: absolute;
+  background-color: #3498db;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  border-radius: 20%;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* 四方の四角形の初期位置 */
+.top-left {
+  top: 100px;
+  left: 100px;
+}
+
+.top-right {
+  top: 100px;
+  right: 100px;
+}
+
+.bottom-left {
+  bottom: 100px;
+  left: 100px;
+}
+
+.bottom-right {
+  bottom: 100px;
+  right: 100px;
+}
+
+/* スクロール時に適用されるクラス */
+.animate .top-left {
+  transform: translate(-50px, -50px) rotate(15deg);
+  opacity: 1;
+}
+
+.animate .top-right {
+  transform: translate(50px, -50px) rotate(-15deg);
+  opacity: 1;
+}
+
+.animate .bottom-left {
+  transform: translate(-50px, 50px) rotate(-15deg);
+  opacity: 1;
+}
+
+.animate .bottom-right {
+  transform: translate(50px, 50px) rotate(15deg);
+  opacity: 1;
+}
+
+h1{
+  margin: 120px;
+}
+
+.box:nth-child(odd){
+  display: flex;
+  flex-direction: row-reverse;
+
+}
+
+.box{
+  display: flex;
+  border: double black 1px;
+  margin-bottom: 200px;
+}
+
+.box {
+  opacity: 0;
+  transform: translateY(50px); /* 下からスライドイン */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 要素が表示される時の状態 */
+.show {
+  opacity: 1;
+  transform: translateY(0); /* 元の位置に戻る */
+}
+
+@media(max-width:800px){
+
+  .box{
+    display: block;
+  }
+  .box:nth-child(odd){
+    display: block;
+
+  }
+
+  /* .link{
+   display: none;
+  } */
+   a{
+    padding: 2px 2px;
+   }
+
+}
+
+
