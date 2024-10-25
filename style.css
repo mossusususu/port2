@@ -131,6 +131,10 @@ h1{
   margin-bottom: 200px;
 }
 
+.box img{
+  object-fit: cover;
+}
+
 .box {
   opacity: 0;
   transform: translateY(50px); /* 下からスライドイン */
@@ -161,5 +165,3 @@ h1{
    }
 
 }
-
-
