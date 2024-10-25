@@ -151,15 +151,16 @@ h1{
 
   .box{
     display: block;
+
   }
   .box:nth-child(odd){
     display: block;
 
   }
 
-  /* .link{
+   .link{
    display: none;
-  } */
+  }
    a{
     padding: 2px 2px;
    }
